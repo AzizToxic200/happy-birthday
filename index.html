@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday Maman</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <audio id="birthdayAudio" src="assets/birthday-melody.wav" autoplay preload="auto"></audio>
+  <canvas id="sparkCanvas" aria-hidden="true"></canvas>
+
+  <main class="birthday-scene" aria-label="Happy birthday scene">
+    <div class="pink-sky" aria-hidden="true">
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+
+    <section class="birthday-card">
+      <div class="stars" aria-hidden="true"></div>
+      <div class="birthday-date" aria-label="Birthday date">
+        <span>August</span>
+        <strong>02</strong>
+      </div>
+      <figure class="photo-frame" id="photoFrame" aria-label="Birthday photo">
+        <img id="birthdayPhoto" alt="Birthday person" />
+        <figcaption>For Mom</figcaption>
+      </figure>
+      <div class="floating-hearts" aria-hidden="true">
+        <i></i><i></i><i></i><i></i><i></i><i></i>
+      </div>
+
+      <div class="cake" aria-hidden="true">
+        <div class="glow"></div>
+        <div class="flame"></div>
+        <div class="candle"></div>
+        <div class="icing"></div>
+        <div class="cake-top"></div>
+        <div class="cake-body"></div>
+        <div class="plate"></div>
+      </div>
+
+      <h1>Happy Birthday <span>Maman</span></h1>
+      <p>I love you so much, my dearest mom. May God fill your heart with joy and keep you always with us.</p>
+    </section>
+
+    <button class="photo-open" id="photoOpen" type="button" aria-label="Add birthday photo" title="Add photo">Photo</button>
+    <dialog class="photo-dialog" id="photoDialog">
+      <form class="photo-form" id="photoForm">
+        <button class="dialog-close" id="photoClose" type="button" aria-label="Close">x</button>
+        <span class="form-kicker">Personal photo</span>
+        <h2>Add her picture</h2>
+        <label for="photoUrl">Image URL</label>
+        <input id="photoUrl" type="url" placeholder="https://example.com/photo.jpg" autocomplete="off" />
+        <div class="form-actions">
+          <button class="save-photo" type="submit">Save Photo</button>
+          <button class="clear-photo" id="clearPhoto" type="button">Remove</button>
+        </div>
+      </form>
+    </dialog>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
